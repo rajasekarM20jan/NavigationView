@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/terms"
+            android:title="Terms And Conditions"
+            />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/about"
+            android:title="About"
+            />
+        <item android:id="@+id/version"
+            android:title="Version"
+            />
+    </group>
+
+    <item tools:ignore="MenuTitle">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/profile"
+                    android:title="Profile"/>
+                <item android:id="@+id/logout"
+                    android:title="Logout"/>
+            </group>
+        </menu>
+    </item>
+</menu>
