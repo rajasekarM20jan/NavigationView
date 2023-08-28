@@ -88,8 +88,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
-                String thumbprint = "";
-                String serverHostName = "ifvr-api-management-dev.azure-api.net";
                 String postUrl = "https://ifvr-api-management-dev.azure-api.net/api/v1/IFVR/MobileApp/SSLPinningTesting";
                 final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                 JSONObject Details = new JSONObject();
@@ -161,8 +159,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             SSLContext sslContext = SSLContext.getInstance("TLS");
             sslContext.init(keyManagerFactory.getKeyManagers(), null, new SecureRandom());
 
-            TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
-            trustManagerFactory.init(keyStore);
+           /* TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+            trustManagerFactory.init(keyStore);*/
             //Finally set the sslSocketFactory to our builder and build it
             return httpClientBuilder.sslSocketFactory(sslContext.getSocketFactory()).build();
         }catch (Exception e){
